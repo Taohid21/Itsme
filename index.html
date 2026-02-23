@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taohid Islam Nilav | Official</title>
+    
+    <!-- Premium Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for High-Quality Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #050505;
+            background-image: radial-gradient(circle at center, #111a21 0%, #050505 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* --------------------------------------
+           Professional Animated Fireflies (Bugs)
+        --------------------------------------- */
+        .fireflies {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .firefly {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: #00f2fe;
+            border-radius: 50%;
+            box-shadow: 0 0 15px #00f2fe, 0 0 30px #4facfe;
+            opacity: 0;
+        }
+
+        /* Unique Animations for each firefly */
+        .f1 { bottom: 10%; left: 10%; animation: floatBug 12s ease-in-out infinite; }
+        .f2 { bottom: 20%; right: 10%; animation: floatBug 15s ease-in-out infinite reverse; }
+        .f3 { top: 20%; left: 30%; animation: floatBug 10s ease-in-out infinite; }
+        .f4 { top: 50%; right: 20%; animation: floatBug 18s ease-in-out infinite reverse; }
+        .f5 { bottom: 40%; left: 50%; animation: floatBug 14s ease-in-out infinite; }
+
+        @keyframes floatBug {
+            0% { transform: translate(0, 0) scale(1); opacity: 0; }
+            20% { opacity: 1; }
+            50% { transform: translate(150px, -100px) scale(1.5); opacity: 0.8; }
+            80% { opacity: 1; }
+            100% { transform: translate(-50px, -200px) scale(1); opacity: 0; }
+        }
+
+        /* --------------------------------------
+           Content Layout (No Box / Box-less)
+        --------------------------------------- */
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        /* Image Styling */
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 0 40px rgba(0, 242, 254, 0.4);
+            margin-bottom: 25px;
+            animation: breathe 4s ease-in-out infinite;
+        }
+
+        @keyframes breathe {
+            0%, 100% { transform: translateY(0); box-shadow: 0 0 30px rgba(0, 242, 254, 0.3); }
+            50% { transform: translateY(-10px); box-shadow: 0 0 50px rgba(0, 242, 254, 0.6); }
+        }
+
+        /* Typography */
+        h1.name {
+            font-size: 3.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: linear-gradient(to right, #ffffff, #00f2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+            text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        h2.profession {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #a0aec0;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        h2.profession span {
+            color: #00f2fe;
+            font-weight: 700;
+        }
+
+        /* Personal Info Text - Seamless */
+        .info-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            color: #cbd5e0;
+            font-weight: 300;
+        }
+
+        .info-container p strong {
+            color: #ffffff;
+            font-weight: 700;
+            margin-right: 5px;
+        }
+
+        /* --------------------------------------
+           High-End Social Media Icons
+        --------------------------------------- */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .social-links a {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 65px;
+            height: 65px;
+            font-size: 1.8rem;
+            color: #ffffff;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Glow & Pop Hover Effects */
+        .social-links a::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: 50%;
+            z-index: -1;
+            transition: all 0.4s ease;
+            opacity: 0;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-8px) scale(1.1);
+            border-color: transparent;
+        }
+
+        .social-links a.facebook:hover {
+            color: #fff;
+            box-shadow: 0 15px 30px rgba(24, 119, 242, 0.5);
+            background: #1877F2;
+        }
+
+        .social-links a.telegram:hover {
+            color: #fff;
+            box-shadow: 0 15px 30px rgba(0, 136, 204, 0.5);
+            background: #0088cc;
+        }
+
+        .social-links a.instagram:hover {
+            color: #fff;
+            box-shadow: 0 15px 30px rgba(225, 48, 108, 0.5);
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1.name { font-size: 2.2rem; }
+            h2.profession { font-size: 0.9rem; letter-spacing: 2px; }
+            .info-container { flex-direction: column; gap: 10px; }
+            .profile-img { width: 150px; height: 150px; }
+            .social-links a { width: 55px; height: 55px; font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Professional Floating Bugs (Fireflies) -->
+    <div class="fireflies">
+        <div class="firefly f1"></div>
+        <div class="firefly f2"></div>
+        <div class="firefly f3"></div>
+        <div class="firefly f4"></div>
+        <div class="firefly f5"></div>
+    </div>
+
+    <!-- Main Content (No Box, directly on background) -->
+    <div class="content-wrapper">
+        
+        <!-- Profile Picture -->
+        <img src="taohid.jpg" alt="Taohid Islam Nilav" class="profile-img">
+        
+        <!-- Name & Profession -->
+        <h1 class="name">Taohid Islam Nilav</h1>
+        <h2 class="profession"><span>Cricketer</span> | Bangladesh U18 National Team</h2>
+        
+        <!-- Info Details -->
+        <div class="info-container">
+            <p><strong>Age:</strong> 16</p>
+            <p><strong>Class:</strong> 10</p>
+        </div>
+        
+        <!-- Social Media Icons -->
+        <div class="social-links">
+            <a href="https://www.facebook.com/share/184cpnoVbZ/" target="_blank" class="facebook" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://t.me/taohid666" target="_blank" class="telegram" title="Telegram">
+                <i class="fab fa-telegram-plane"></i>
+            </a>
+            <a href="https://www.instagram.com/taohid07?igsh=MW1qcDlheGUyajYyNg==" target="_blank" class="instagram" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        
+    </div>
+
+</body>
+</html>
